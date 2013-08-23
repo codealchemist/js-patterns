@@ -26,7 +26,7 @@ var publisher = function() {
         var timestamp = new Date().getTime();
         
         //add subscription
-        if (typeof eventMap[event] !== undefined) eventMap[event] = [];
+        if (typeof eventMap[event] === 'undefined') eventMap[event] = [];
         eventMap[event].push({
             id: timestamp,
             callback: callback
