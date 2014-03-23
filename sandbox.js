@@ -10,10 +10,10 @@
  * @param {function} callback
  * @returns {Sandbox}
  */
-var Sandbox = function(requestedFeatures, callback) {
+function Sandbox(requestedFeatures, callback) {
     this.id = new Date().getTime();
     
-    if (!this instanceof arguments.callee) {
+    if (!this instanceof Sandbox) {
         return new Sandbox(features, callback);
     }
     
@@ -30,7 +30,7 @@ var Sandbox = function(requestedFeatures, callback) {
     
     //run callback passing features
     callback.apply(this, features);
-};
+}
 
 //------------------------------------------------------------------------------
 
