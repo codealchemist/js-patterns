@@ -120,11 +120,13 @@ var Soldier = {
         console.log('[ JOHN SNOW ]--> ' + message);
     },
     attack: function(params, event) {
+        Soldier.log('ATTACK!');
         Soldier.log('event: ' + event);
         Soldier.log('params:');
         console.log(params);
     },
     freeze: function(params, event) {
+        Soldier.log('FREEZE!');
         Soldier.log('Wow, what should I do now?!');
         Soldier.log('event: ' + event);
         Soldier.log('params:');
