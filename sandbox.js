@@ -13,7 +13,7 @@
 function Sandbox(requestedFeatures, callback) {
     this.id = new Date().getTime();
     
-    if (!this instanceof Sandbox) {
+    if ( !(this instanceof Sandbox) ) {
         return new Sandbox(features, callback);
     }
     
